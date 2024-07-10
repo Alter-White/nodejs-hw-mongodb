@@ -26,21 +26,21 @@ export const setupServer = () => {
       const contact = await findContactById(contactId);
 
       if (!contact) {
-        res.status(404).json({
-          status: 'error',
+        res.json({
+          status: '404',
           message: 'Contact not found',
         });
         return;
       }
 
-      res.status(200).json({
-        status: 'success',
+      res.json({
+        status: '200',
         message: 'Successfully found contact!',
         data: contact,
       });
     } catch (error) {
-      res.status(500).json({
-        status: 'error',
+      res.json({
+        status: '500',
         message: 'Something went wrong',
         error: error.message,
       });
@@ -51,14 +51,14 @@ export const setupServer = () => {
     try {
       const contacts = await fetchAllContacts();
 
-      res.status(200).json({
-        status: 'success',
+      res.json({
+        status: '200',
         message: 'Successfully found contacts!',
         data: contacts,
       });
     } catch (error) {
-      res.status(500).json({
-        status: 'error',
+      res.json({
+        status: '500',
         message: 'Something went wrong',
         error: error.message,
       });
