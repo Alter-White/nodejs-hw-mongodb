@@ -27,14 +27,14 @@ export const setupServer = () => {
 
       if (!contact) {
         res.json({
-          status: '404',
+          status: 404,
           message: 'Contact not found',
         });
         return;
       }
 
       res.json({
-        status: '200',
+        status: 200,
         message: 'Successfully found contact!',
         data: contact,
       });
@@ -52,13 +52,13 @@ export const setupServer = () => {
       const contacts = await fetchAllContacts();
 
       res.json({
-        status: '200',
+        status: 200,
         message: 'Successfully found contacts!',
         data: contacts,
       });
     } catch (error) {
       res.json({
-        status: '500',
+        status: 500,
         message: 'Something went wrong',
         error: error.message,
       });
