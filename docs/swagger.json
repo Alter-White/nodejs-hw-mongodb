@@ -11,10 +11,10 @@
   },
   "servers": [
     {
-      "url": "<http://localhost:3000>"
+      "url": "http://localhost:3000"
     },
     {
-      "url": "<http://localhost:3000>"
+      "url": "https://nodejs-hw-mongodb-uexq.onrender.com"
     }
   ],
   "tags": [
@@ -206,11 +206,6 @@
                     "type": "boolean",
                     "example": false
                   },
-                  "userId": {
-                    "description": "Contact's user id",
-                    "type": "string",
-                    "example": "66a3f4824eeac51f68c0468b"
-                  },
                   "photo": {
                     "description": "Contact's photo",
                     "type": "string",
@@ -335,15 +330,6 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "66a3f4824eeac51f68c0468b"
-            }
-          },
-          {
-            "in": "query",
-            "name": "contactId",
-            "schema": {
-              "type": "string",
-              "description": "ID of the contact to update",
               "example": "66a3f4824eeac51f68c0468b"
             }
           }

@@ -12,12 +12,6 @@ parameters:
     schema:
       type: string
       example: '66a3f4824eeac51f68c0468b'
-  - in: query
-    name: contactId
-    schema:
-      type: string
-      description: 'ID of the contact to update'
-      example: '66a3f4824eeac51f68c0468b'
 requestBody:
   required: true
   content:
